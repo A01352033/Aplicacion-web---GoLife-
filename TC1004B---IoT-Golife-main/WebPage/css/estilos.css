@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+    --padding-container: 100px 0;
+    --color-title: #001a49;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container)
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../images/image\ 1.png);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    z-index: -1;
+
+
+}
+
+/* INICIA NAV */
+
+.nav{
+    --padding-container:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav_title{
+    font-weight: 300;
+}
+
+/* MENU DE NAVEGACION */
+
+
+.nav_link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+/* PARA QUITAR EL ESTILO DE LISTAS DE NAV LINK MENU ( INICIO, ACERCA DE, CONTACTO)*/
+
+.nav_items{
+    list-style: none;
+}
+
+
+.nav_links{
+    color:#fff;
+    text-decoration: none;
+    
+}
+
+/* PARA DESAPARECER EL ITEM MENU*/
+
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav_img{
+    display: block;
+    width: 30px;
+}
+
+/* PARA DESAPARECER EL ITEM CLOSE*/
+
+.nav_close{
+    display: var(--show, none);
+}
+
+/* TERMINA NAV */
+
+/* HERO_CONTAINER*/
+
+.hero_container{
+    max-width: 800px;
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero_title{
+    font-size: 3rem;
+}
+
+.hero_paragrapgh{
+    margin-bottom: 20px;
+}
+
+
+/* BOTON INICIO*/
+
+.cta{
+    display:inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color:#fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+
+
+/* ABOUT */
+
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragraph{
+    line-height: 1.7;
+}
+
+.about_main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.about_icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+
+.about_icon{
+    width: 40px;
+}
+
+/* TESTIMONY */
+
+.testimony{
+    background-color: #e5e5f7;
+
+}
+
+.testimony_container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+}
+
+.testimony_body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content:space-between ;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.testimony_body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.testimony_img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.testimony_texts{
+    max-width: 700px;
+}
+
+.testimony_course{
+    background-color: royalblue;
+    color:#fff;
+    display: inline-block;
+    padding: 5px;
+    
+    
+}
+
+.testimony_arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
+/* CLASES* (PLANTA GIRASOL) */
+
+
+
+.clases_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture{
+    max-width: 500px;
+}
+
+.clases_paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 2 (CALÉNDULA)*/
+
+.clases2{
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+}
+
+.clases_container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+
+}
+
+.clases_picture2{
+    max-width: 500px;
+}
+
+.clases_paragraph2{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img2{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 3 (PETUNIA)*/
+
+
+
+.clases_container3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture3{
+    max-width: 500px;
+}
+
+.clases_paragraph3{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img3{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 4 (PLANTA MAIZ)*/
+
+.clases4{
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+}
+
+.clases_container4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture4{
+    max-width: 500px;
+}
+
+.clase_paragraph4{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img4{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 5 (PLANTA ONAGRA)*/
+
+
+
+.clases_container5{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture5{
+    max-width: 500px;
+}
+
+.clases_paragraph5{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img5{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 6 (PLANTA LUNARIA ANNUA)*/
+
+.clases6{
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+}
+
+.clases_container6{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture6{
+    max-width: 500px;
+}
+
+.clases_paragraph6{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img6{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 7 (PLANTA LINAZA)*/
+
+
+
+.clases_container7{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture7{
+    max-width: 500px;
+}
+
+.clases_paragraph7{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img7{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 8 (PLANTA ALHELI)*/
+
+.clases8{
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+}
+
+.clases_container8{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture8{
+    max-width: 500px;
+}
+
+.clases_paragraph8{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img8{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 9(GERANIO)*/
+
+
+
+
+.clases_container9{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture9{
+    max-width: 500px;
+}
+
+.clases_paragraph9{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img9{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 10 (CLAVEL)*/
+
+.clases10{
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+}
+
+.clases_container10{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture10{
+    max-width: 500px;
+}
+
+.clases_paragraph10{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.cta2{
+    display:inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 32px;
+}
+
+.cta3{
+    display:inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 32px;
+}
+
+.cta4{
+    display:inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 32px;
+}
+
+.clases_img10{
+    width: 100%;
+    display: block;
+}
+
+/* CLASES 11 (LAZO DE AMOR)*/
+
+
+
+
+.clases_container11{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.clases_picture11{
+    max-width: 500px;
+}
+
+.clases_paragraph11{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.clases_img11{
+    width: 100%;
+    display: block;
+}
